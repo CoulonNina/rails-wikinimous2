@@ -1,0 +1,10 @@
+<%= render "form", article: @article %>
+
+<h2><%= @article.title %></h2>
+<p><%= @article.content %></p>
+<p><%= @article.name %></p>
+
+<%= link_to "Delete",
+  article_path(@article),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
